@@ -1,0 +1,25 @@
+﻿@model Doctor
+<div id="content" >
+<div class="container mt-5">
+    <form method="post" enctype="multipart/form-data">
+  <div  class="form-group">
+    <label asp-for="Name"> </label>
+    <input asp-for="Name" class="form-control" >
+  </div>
+   <div  class="form-group">
+    <label asp-for="SurName"> </label>
+    <input asp-for="SurName" class="form-control" >
+  </div>
+    <div  class="form-group">
+    <label asp-for="Position"> </label>
+    <input asp-for="Position" class="form-control" >
+  </div>
+    <div  class="form-group">
+    <label asp-for="ImageFile"> </label>
+    <input asp-for="ImageFile" class="form-control" >
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+</div> 

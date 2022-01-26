@@ -207,7 +207,7 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                <a class="btn btn-primary" asp-controller="Doctor" asp-action="Create">Add</a>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -218,6 +218,7 @@
                                 <th>Name</th>
                                 <th>Surname</th>
                                 <th>Position</th>
+                                <th>Image</th>
                                 <th>Setting</th>
                             </tr>
                         </thead>
@@ -231,14 +232,14 @@
                                     <td>@doctor.Name</td>
                                     <td>@doctor.SurName</td>
                                     <td>@doctor.Position</td>
+                                    <td><img src="~/assets/img/doctors/@doctor.Image" width="150px" />   </td>
+
                                     <td>
                                         <a asp-action="Update" asp-route-id=@doctor.Id><i class="far fa-edit"></i></a>
-                                        <a asp-action="Delete" asp-route-id=@doctor.Id><i class="far fa-trash-alt"></i>
-                                        </a>
-
+                                        <a asp-action="Delete" asp-route-id=@doctor.Id><i class="far fa-trash-alt"></i></a>
                                     </td>
-
                                 </tr>
+                                count++;
                             }
                         </tbody>
                     </table>
