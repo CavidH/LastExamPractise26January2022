@@ -30,10 +30,7 @@ namespace LastExamPractise26January2022.Controllers
             return View(homeVm);
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+    
 
 
     }
