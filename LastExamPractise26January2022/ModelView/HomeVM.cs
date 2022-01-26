@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace LastExamPractise26January2022.ModelView
 {
-    public class HomeMV
+    public class HomeVM
     {
         public List<Doctor> doctors { get; set; }
     }
