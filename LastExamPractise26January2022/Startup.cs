@@ -1,3 +1,4 @@
+using FluentValidation.AspNetCore;
 using LastExamPractise26January2022.Data.DAL;
 using LastExamPractise26January2022.Data.Entities;
 using Microsoft.AspNetCore.Builder;
@@ -30,6 +31,8 @@ namespace LastExamPractise26January2022
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
+            services.AddFluentValidation()
+                 .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Startup>());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
